@@ -1,0 +1,57 @@
+File containing usage details for classifier.py and preprocess.py
+
+Aly Valliani and Richard Liang
+CS65 Final Project
+12/18/14
+
+There are two ways to pre-process the data and run our classifier:
+
+(1) Use scripts.sh. Step provided for clarity:
+
+        1. Usage: source scripts.sh
+        
+        *****PREPROCESS*****
+
+        2. To preprocess train data:
+                Usage: preprocess
+           
+           To preprocess train and development data:
+                Usage: preprocess_dev
+
+           To preprocess train and test data:
+                Usage: preprocess_test
+        
+        *****CLASSIFY*****
+
+        3. To run 5-fold classification on train data:
+                Usage: classify
+
+           To run classification on development data:
+                Usage: classify_dev
+
+           To run classification on testing data:
+                Usage: classify_test
+
+(2) Manually as specified within write-up. Steps:
+
+        *****PREPROCESS*****
+
+        Usage: python3 preprocess.py <ORIGINAL_FILE PATH> <OUTPUT_FILE PATH>
+
+        *****CLASSIFY*****
+
+        n-fold cross-validation:
+
+        Usage: python3 classifier.py <TRAINING_FILE PATH> n
+
+        No cross-validation:
+
+        Usage: python3 classifier.py <TRAINING_FILE PATH> <TEST_FILE PATH>
+
+Note: Pre-processing should take a few seconds.
+Note: Using n-fold cross-validation leads to non-deterministic results as the
+chunks for training and testing are random for each run. This may lead to 
+different accuracies than those presented in the paper.
+
+
+
